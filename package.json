@@ -1,0 +1,46 @@
+{
+  "name": "storytellr-js",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Eine kleine und leichte JavaScript-Bibliothek für das Erzählen von Geschichten im Web.",
+  "main": "dist/script/storytellr.min.js",
+  "scripts": {
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frankie1996/Storytellr.js.git"
+  },
+  "author": "Frank Zinsli",
+  "keywords": [
+    "Storytellr.js",
+    "Storytelling",
+    "JS-Library",
+    "JavaScript-Library"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Frankie1996/Storytellr.js/issues"
+  },
+  "homepage": "https://github.com/Frankie1996/Storytellr.js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.9",
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {}
+}

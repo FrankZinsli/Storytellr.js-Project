@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Titel</title>
+  </head>
+  <body>
+
+  <!-- Header Image -->
+<!--    <header class="story-header story-header-image" id="yourHeaderImageId">
+      <div class="story-header-image-text">
+        <h1 class="story-text-h1" style="font-size: 3rem">Titel</h1>
+        <h2 class="story-text-h2" style="font-size: 2.5rem">Subtitel</h2>
+      </div>
+    </header>-->
+
+  <!-- Header Image Slideshow -->
+  <header class="story-header story-header-image-slideshow" id="YourHeaderImageSlideshowId">
+    <div class="story-header-image">
+      <img
+        src="../src/assets/images/image1.jpg"
+        data-story-focus-left="60%"
+        data-story-focus-top="40%"
+      >
+    </div>
+    <div class="story-header-image">
+      <img
+        src="../src/assets/images/image2.jpg"
+        data-story-focus-left="60%"
+        data-story-focus-top="50%"
+      >
+    </div>
+    <div class="story-header-image">
+      <img
+        src="../src/assets/images/image3.jpg"
+        data-story-focus-left="45%"
+        data-story-focus-top="50%"
+      >
+    </div>
+    <div class="story-header-image-text">
+      <h1 class="story-text-h1" style="font-size: 3rem">Titel</h1>
+      <h2 class="story-text-h2" style="font-size: 2.5rem">Subtitel</h2>
+    </div>
+  </header>
+
+<!--  <header class="story-header story-header-video" id="YourHeaderVideoId">
+    <video poster="../src/assets/images/image1.jpg" autoplay playsinline muted loop>
+      <source src="../src/assets/video/example.mp4" type="video/mp4">
+    </video>
+
+    <div class="story-header-video-text">
+      <h1>Heading</h1>
+      <p>Lorem ipsum...</p>
+    </div>
+  </header>-->
+
+<!--  <header class="story-header story-header-video" id="YourHeaderVideoId">
+    <div class="story-header-video-text">
+      <h1>Heading</h1>
+      <p>Lorem ipsum...</p>
+    </div>
+  </header>-->
+
+  <main class="story-container">
+
+    <section class="story-section">
+      <h1 class="story-text-h1">Inhalt</h1>
+      <div class="story-table-of-contents" id="tableOfContents"></div>
+    </section>
+
+    <section class="story-section">
+      <h1 id="one" class="story-text-h1 story-toc-element-1">Title 1</h1>
+      <h2 id="two" class="story-text-h2 story-toc-element-2">Title 2</h2>
+      <h1 id="three" class="story-text-h1 story-toc-element-1">Title 1</h1>
+      <h2 id="four" class="story-text-h2 story-toc-element-2">Title 2</h2>
+      <h3 id="five" class="story-text-h3 story-toc-element-2">Title 2</h3>
+      <h3 id="six" class="story-text-h3 story-toc-element-2">Title 2</h3>
+      <p class="story-text">Text in Paragraph</p>
+    </section>
+
+    <section class="story-section">
+      <div class="story-image-slideshow" id="Your-Slideshow-Name">
+        <div class="story-image">
+          <img alt="First Image"
+               src="https://images.unsplash.com/photo-1611095567219-8fa7d4d8bf48?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80">
+          <div class="story-image-caption">
+            Caption Text one
+          </div>
+        </div>
+        <div class="story-image">
+          <img alt="Second Image"
+               src="https://images.unsplash.com/photo-1612832164313-ac0d7e07b5ce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80">
+          <div class="story-image-caption">
+            Caption Two one
+          </div>
+        </div>
+        <div class="story-image">
+          <img alt="Third Image"
+               src="https://images.unsplash.com/photo-1611095565995-d09bbf618f6d?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80">
+          <div class="story-image-caption">
+            Caption Three one
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-video-container-wrapper" id="Your-Youtube-Video-Name"></div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-video-container-wrapper" id="Your-Vimeo-Video-Name"></div>
+    </section>
+
+    <section class="story-section">
+      <img id="yourImageZoomId" class="story-image-zoom" src="../src/assets/images/image1.jpg" alt="Snow">
+
+      <!--<div id="myModal" class="story-image-zoom-modal">
+        <span class="story-image-zoom-close">&times;</span>
+        <img class="story-image-zoom-modal-content" id="img01">
+        <div class="story-image-zoom-modal-caption" id="caption"></div>
+      </div>-->
+
+    </section>
+
+    <section class="story-section">
+      <img id="yourImageZoomId02" class="story-image-zoom" src="../src/assets/images/image2.jpg" alt="Beschreibung">
+    </section>
+
+    <section class="story-section">
+      <img class="story-image" src="../src/assets/images/image2.jpg" alt="Winter">
+    </section>
+  </main>
+
+  <script type="text/javascript">
+    // Header Image
+/*    new $story.HeaderImage({
+      id: "yourHeaderImageId",
+      src: "../src/assets/images/image4.jpg",
+      focusPointLeft: '45%',
+      focusPointTop: '50%',
+      // Scrolldown option
+    })*/
+
+    // Header Image Slideshow
+    new $story.HeaderImageSlideshow({
+      id: "YourHeaderImageSlideshowId",
+      autoplay: 4000,
+    })
+
+    // Image Zoom
+    new $story.ImageFullscreen({
+      imageIds: [
+        'yourImageZoomId',
+        'yourImageZoomId02'
+      ]
+    })
+
+    // Header Video
+/*    new $story.VideoPlayer({
+      id: "YourHeaderVideoId",
+      vimeo: {
+        videoId: "76979871",
+        background: true
+      }
+    });*/
+
+    // Create TOC
+    new $story.TocGenerator({
+      id: "tableOfContents",
+      listType: "ol",
+      navLink: true
+    });
+
+    // Slideshow
+    new $story.ImageSlideshow({
+      id: "Your-Slideshow-Name",
+      animation: "fade",
+      imageCount: true,
+      autoplay: 9000,
+      arrows: true,
+      controller: "dot"
+    });
+
+    // Youtube Video
+    new $story.VideoPlayer({
+      id: "Your-Youtube-Video-Name",
+      youtube: {
+        videoId: "fKkzqk3RMLc",
+        autoplay: false,
+        loop: true,
+        controls: true,
+        start: '110',
+        end: '140',
+        allowFullScreen: true,
+        mute: true,
+        modestbranding: true
+      }
+    })
+
+    // Vimeo Video
+    new $story.VideoPlayer({
+      id: "Your-Vimeo-Video-Name",
+      vimeo: {
+        videoId: "495297859",
+        autopause: false,
+        loop: true,
+        muted: true,
+        quality: '1080p',
+        allowFullScreen: true
+      }
+    })
+
+  </script>
+
+  </body>
+</html>
