@@ -5,7 +5,7 @@
     <img src="https://storytellr.netlify.app/assets/logo/b_logo.svg" width="300">
   </a>
 
-  <h1 align="center">Dokumentation</h1>
+  <h1 align="center">JavaScript-Bibliothek</h1>
   <p align="center">
     <a href="https://storytellr.netlify.app"><strong>Mehr erfahren »</strong></a>
     <br />
