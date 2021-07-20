@@ -17,6 +17,7 @@ export default class VideoPlayer {
                 mute: obj.youtube.mute || false,
                 start: obj.youtube.start || false,
                 modestbranding: obj.youtube.modestbranding || false,
+                playsInline: obj.youtube.playsInline || false,
             }
         }
         else if (obj.vimeo) {
@@ -29,7 +30,8 @@ export default class VideoPlayer {
                 muted: obj.vimeo.muted || false,
                 quality: obj.vimeo.quality || 'auto',
                 allowFullScreen: obj.vimeo.allowFullScreen || false,
-                background: obj.vimeo.background || false
+                background: obj.vimeo.background || false,
+                playsInline: obj.vimeo.playsInline || false,
             }
         }
 
@@ -42,6 +44,8 @@ export default class VideoPlayer {
             this.youtube.start && this.addUrlOptionYt('start='+this.youtube.start)
             this.youtube.end && this.addUrlOptionYt('end='+this.youtube.end)
             this.youtube.mute && this.addUrlOptionYt('mute=1')
+            this.youtube.playsInline && this.addUrlOptionYt('playsinline=1')
+            !this.youtube.playsInline && this.addUrlOptionYt('playsinline=0')
             this.youtube.allowFullScreen && this.addUrlOptionYt(' allowfullscreen')
             this.createYoutubePlayer(this.id, this.youtube.videoId, this.urlOptions)
         }
@@ -51,6 +55,8 @@ export default class VideoPlayer {
             this.vimeo.loop && this.addUrlOptionVimeo('loop=1')
             !this.vimeo.controls && this.addUrlOptionVimeo('controls=0')
             this.vimeo.muted && this.addUrlOptionVimeo('muted=1')
+            this.vimeo.playsInline && this.addUrlOptionVimeo('playsinline=1')
+            !this.vimeo.playsInline && this.addUrlOptionVimeo('playsinline=0')
             this.vimeo.quality && this.addUrlOptionVimeo('quality='+this.vimeo.quality)
             this.createVimeoPlayer(this.id, this.vimeo.videoId, this.urlOptions)
         }

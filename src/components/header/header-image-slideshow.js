@@ -3,7 +3,7 @@ import "./header-image-slideshow.scss"
 export default class HeaderImageSlideshow {
     constructor(obj) {
         this.id = obj.id;
-        this.autoplay = obj.autoplay;
+        this.autoplay = obj.autoplay  || 9000;
         this.slideshowElement = document.getElementById(this.id)
         this.autoplay && this.createHeaderImageSlideshow(this.autoplay, this.id, this.slideshowElement)
     }
