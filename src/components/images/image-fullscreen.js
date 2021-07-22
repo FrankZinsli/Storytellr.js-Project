@@ -1,7 +1,6 @@
 import "./image-fullscreen.scss"
 import setAttributes from "../../helpers/set-attributes";
 
-
 export default class ImageFullscreen {
     constructor(obj) {
         this.ids = obj.imageIds
@@ -12,7 +11,6 @@ export default class ImageFullscreen {
             let modal, img, modalContent, captionContent, close
 
             img = document.getElementById(id);
-
             modal = document.createElement("div")
             setAttributes(modal, {
                 "id" : "modal-"+id,
@@ -21,7 +19,6 @@ export default class ImageFullscreen {
             })
 
             modal = img.parentNode.insertBefore(modal, img.nextSibling)
-
             close = document.createElement("span")
             setAttributes(close, {
                 "id" : "closeModal-"+id,

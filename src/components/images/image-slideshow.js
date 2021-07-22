@@ -19,19 +19,23 @@ export default class ImageSlideshow {
     ImageSlideshow.showCurrentSlide(this.id, '')
   }
   createImageCount(storyImages){
+    let divElement, textNode;
+
     for (let i = 0; i < storyImages.length; i++){
-      const divElement = document.createElement('div')
+      divElement = document.createElement('div')
       setAttributes(divElement, {
         "class" : "story-slideNumber"
       })
-      const textNode = document.createTextNode((i+1) + ' / ' + storyImages.length)
+      textNode = document.createTextNode((i+1) + ' / ' + storyImages.length)
       divElement.appendChild(textNode)
       storyImages[i].insertBefore(divElement, storyImages[i].firstChild)
     }
   }
   createArrows(){
-    const prevButton = document.createElement('a')
-    const nextButton = document.createElement('a')
+    let prevButton, nextButton
+
+    prevButton = document.createElement('a')
+    nextButton = document.createElement('a')
     setAttributes(prevButton, {
       "class" : "story-prevImage",
       //"id" : this.slideshow.id + '-PrevImageButton',
@@ -57,13 +61,15 @@ export default class ImageSlideshow {
     }
   }
   createController(storyLength){
+    let divElement, spanElement;
+
     if(this.controller === 'dot'){
-      const divElement = document.createElement('div')
+      divElement = document.createElement('div')
       setAttributes(divElement, {
         "class" : "story-image-controllers",
       })
       for (let i = 0; i < storyLength; i++){
-        const spanElement = document.createElement('span')
+        spanElement = document.createElement('span')
         setAttributes(spanElement, {
           "class" : "story-image-controller-" + this.controller,
           "onclick" : '$story.ImageSlideshow.showCurrentSlide(' + '"' + this.id + '", ' + (i) + ')'
@@ -73,14 +79,19 @@ export default class ImageSlideshow {
       }
     }
   }
+
   static showCurrentSlide(slideshowID, index){
-    let defaultIndex = 0
+    let defaultIndex, slideshow, slides, controlls;
+
+    defaultIndex = 0
     if (index === ''){
       index = defaultIndex
     }
-    const slideshow = document.getElementById(slideshowID)
-    const slides = slideshow.getElementsByClassName('story-image')
-    const controlls = slideshow.querySelectorAll('*[class^="story-image-controller-"]')
+
+    slideshow = document.getElementById(slideshowID)
+    slides = slideshow.getElementsByClassName('story-image')
+    controlls = slideshow.querySelectorAll('*[class^="story-image-controller-"]')
+
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
       slides[i].className = slides[i].className.replace(" active-slide", "")
@@ -96,14 +107,15 @@ export default class ImageSlideshow {
   }
 
   static showNextSlide(slideshowID, plusMinus){
-    const slideshow = document.getElementById(slideshowID)
-    const activeSlide = slideshow.getElementsByClassName('story-image active-slide')
-    const slides = slideshow.getElementsByClassName('story-image')
-    const controlls = slideshow.querySelectorAll('*[class^="story-image-controller-"]')
+    let slideshow, activeSlide, slides, controlls, activeSlideIndex, newIndex;
+
+    slideshow = document.getElementById(slideshowID)
+    slides = slideshow.getElementsByClassName('story-image')
+    controlls = slideshow.querySelectorAll('*[class^="story-image-controller-"]')
 
     for (let i = 0; i < slides.length; i++) {
       if (slides[i].classList.contains('active-slide')) {
-        var activeSlideIndex = i
+        activeSlideIndex = i
       }
       slides[i].style.display = "none";
       slides[i].className = slides[i].className.replace(" active-slide", "")
@@ -114,11 +126,11 @@ export default class ImageSlideshow {
     }
 
     if (activeSlideIndex+(plusMinus) < 0){
-        var newIndex = slides.length-1
+        newIndex = slides.length-1
       } else if(activeSlideIndex+(plusMinus) > slides.length-1){
-        var newIndex = 0
+        newIndex = 0
       } else{
-        var newIndex = activeSlideIndex+(plusMinus)
+        newIndex = activeSlideIndex+(plusMinus)
       }
       slides[newIndex].style.display = "block";
       slides[newIndex].className += " active-slide"
@@ -126,28 +138,35 @@ export default class ImageSlideshow {
   }
 
   autoPlayer(autoplayTime, slideshowID){
-    const slideshow = document.getElementById(slideshowID)
-    const slides = slideshow.getElementsByClassName('story-image')
-    const controlls = slideshow.querySelectorAll('*[class^="story-image-controller-"]')
+    let slideshow, slides, controlls;
+
+    slideshow = document.getElementById(slideshowID)
+    slides = slideshow.getElementsByClassName('story-image')
+    controlls = slideshow.querySelectorAll('*[class^="story-image-controller-"]')
+
     setInterval(function (){
+      let autoSlideIndex, newIndex;
       for (let i = 0; i < slides.length; i++) {
         if (slides[i].classList.contains('active-slide')) {
-          var autoSlideIndex = i
+          autoSlideIndex = i
         }
         slides[i].style.display = "none";
         slides[i].className = slides[i].className.replace(" active-slide", "")
       }
+
       for (let i = 0; i < controlls.length; i++) {
         controlls[i].className = controlls[i].className.replace(" active-controller", "")
       }
       autoSlideIndex++
+
       if (autoSlideIndex < 0){
-        var newIndex = slides.length-1
+        newIndex = slides.length-1
       } else if(autoSlideIndex > slides.length-1){
-        var newIndex = 0
+        newIndex = 0
       } else{
-        var newIndex = autoSlideIndex
+        newIndex = autoSlideIndex
       }
+
       slides[newIndex].style.display = "block";
       slides[newIndex].className += " active-slide"
       controlls[newIndex].className += " active-controller";

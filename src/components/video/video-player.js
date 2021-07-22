@@ -3,9 +3,9 @@ import setAttributes from "../../helpers/set-attributes";
 
 export default class VideoPlayer {
     constructor(obj) {
-        // initial values
         this.urlOptions = '';
         this.id = obj.id;
+
         if (obj.youtube) {
             this.youtube = {
                 videoId: obj.youtube.videoId,
@@ -35,7 +35,6 @@ export default class VideoPlayer {
             }
         }
 
-        /*Die automatische Wiedergabe ist nur erlaubt, wenn durch den Benutzer erlaubt, die Seite vom Benutzer aktiviert wurde oder das Medium stummgeschaltet ist.*/
         if (this.youtube && document.getElementById(this.id)) {
             this.youtube.autoplay && this.addUrlOptionYt('autoplay=1&origin='+window.location.origin)
             this.youtube.loop && this.addUrlOptionYt('playlist='+this.youtube.videoId+'&loop=1')
@@ -88,14 +87,19 @@ export default class VideoPlayer {
     }
 
     createYoutubePlayer(player_id, player_video_id, player_url_options) {
-        let embedUrl = "http://www.youtube.com/embed/"+player_video_id+player_url_options
-        let videoWrapper = document.getElementById(player_id)
-        let videoContainer = document.createElement("div")
+        let embedUrl, videoWrapper, videoContainer, iframeContainer;
+
+        embedUrl = "http://www.youtube.com/embed/"+player_video_id+player_url_options
+        videoWrapper = document.getElementById(player_id)
+        videoContainer = document.createElement("div")
+
         setAttributes(videoContainer, {
             "class" : "story-video-container",
         })
+
         videoWrapper.appendChild(videoContainer)
-        let iframeContainer = document.createElement("iframe")
+        iframeContainer = document.createElement("iframe")
+
         if (this.youtube.allowFullScreen) {
             setAttributes(iframeContainer, {
                 "allowfullscreen" : "allowfullscreen",
@@ -105,6 +109,7 @@ export default class VideoPlayer {
                 "webkitallowfullscreen" : "webkitallowfullscreen",
             })
         }
+
         setAttributes(iframeContainer, {
             "class" : "story-youtube-player",
             "src" : embedUrl,
@@ -114,16 +119,18 @@ export default class VideoPlayer {
     }
 
     createVimeoPlayer(player_id, player_video_id, player_url_options) {
-        let embedUrl = "https://player.vimeo.com/video/"+player_video_id+player_url_options
+        let embedUrl, videoWrapper, videoContainer, iframeContainer;
 
-        let videoWrapper = document.getElementById(player_id)
-        let videoContainer = document.createElement("div")
+        embedUrl = "https://player.vimeo.com/video/"+player_video_id+player_url_options
+
+        videoWrapper = document.getElementById(player_id)
+        videoContainer = document.createElement("div")
         setAttributes(videoContainer, {
             "class" : "story-video-container",
         })
 
         videoWrapper.insertBefore(videoContainer, videoWrapper.firstChild)
-        let iframeContainer = document.createElement("iframe")
+        iframeContainer = document.createElement("iframe")
 
         if (this.vimeo.allowFullScreen) {
             setAttributes(iframeContainer, {

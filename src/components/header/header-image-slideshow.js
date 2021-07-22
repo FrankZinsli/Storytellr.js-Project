@@ -8,7 +8,7 @@ export default class HeaderImageSlideshow {
         this.autoplay && this.createHeaderImageSlideshow(this.autoplay, this.id, this.slideshowElement)
     }
     createHeaderImageSlideshow(autoplayTime, slideshowID, slideshowElement){
-        let slideshow, slides, newIndex, x, i, src, focusLeft, focusTop;
+        let slideshow, slides, newIndex, x, i, src, focusLeft, focusTop, animationDelay;
         let autoSlideIndex = 0
 
         slideshow = document.getElementById(slideshowID)
@@ -26,7 +26,7 @@ export default class HeaderImageSlideshow {
             slides[x].style.display = "none"
         }
 
-        let animationDelay = autoplayTime/1000;
+        animationDelay = autoplayTime/1000;
         setInterval(function (){
             for (i = 0; i < slides.length; i++) {
                 if (slides[i].classList.contains('story-header-image-active')) {

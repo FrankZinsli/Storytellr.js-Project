@@ -24,6 +24,7 @@ export default class TocGenerator {
         setAttributes(listTypeElement, {
             "class" : "story-toc-list-"+listType
         })
+
         tocListTypeElement = tocElement.appendChild(listTypeElement)
 
         allTocElements = document.querySelectorAll("[class*='story-toc-element-']")
@@ -41,10 +42,14 @@ export default class TocGenerator {
             tocListTypeElement.appendChild(liElement)
         });
     }
+
     static createNavLink (item, tocListTypeElement) {
-        let tempLiElement = document.createElement('li')
-        let createNavTag = document.createElement('a')
-        let linkText = document.createTextNode(item.innerHTML);
+        let tempLiElement, createNavTag, linkText;
+
+        tempLiElement = document.createElement('li')
+        createNavTag = document.createElement('a')
+        linkText = document.createTextNode(item.innerHTML);
+
         createNavTag.appendChild(linkText);
         createNavTag.title = item.innerHTML;
         createNavTag.href = "#"+item.id;
