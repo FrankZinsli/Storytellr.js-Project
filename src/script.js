@@ -8,6 +8,7 @@ import HeaderImageSlideshow from "./components/header/header-image-slideshow"
 import ImageFullscreen from "./components/images/image-fullscreen";
 import AudioSlideshow from "./components/audio/audio-slideshow";
 import TextSlideshow from "./components/text-slideshow/text-slideshow";
+import MediaSlideshow from "./components/multimedia/media-slideshow";
 
 export {
   ImageSlideshow,
@@ -17,5 +18,6 @@ export {
   HeaderImageSlideshow,
   ImageFullscreen,
   AudioSlideshow,
-  TextSlideshow
+  TextSlideshow,
+  MediaSlideshow
 }

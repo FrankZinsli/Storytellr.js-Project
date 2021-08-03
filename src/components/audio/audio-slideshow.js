@@ -45,7 +45,7 @@ export default class AudioSlideshow {
     }
 
     static showCurrentAudio(slideshowID, index){
-        let defaultIndex, slideshow, audioSlides, controlls, controllsNew;
+        let defaultIndex, slideshow, audioSlides, controlls, controllsNew, audios;
 
         defaultIndex = 0
         if (index === ''){
@@ -56,9 +56,11 @@ export default class AudioSlideshow {
         audioSlides = slideshow.getElementsByClassName('story-audio-slideshow-container')
         controlls = slideshow.querySelectorAll('*[class^="story-audio-controller"]')
         controllsNew = slideshow.getElementsByClassName('story-audio-controller-'+[index])
+        audios = slideshow.getElementsByClassName('story-audio-slideshow')
 
         for (let i = 0; i < audioSlides.length; i++) {
             audioSlides[i].style.display = "none";
+            audios[i].pause()
         }
         audioSlides[index].style.display = "block";
         for (let i = 0; i < controlls.length; i++) {
