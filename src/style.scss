@@ -93,6 +93,17 @@ a {
   border-radius: 5px;
 }
 
+.story-audio {
+  width: 100%;
+  height: auto;
+}
+
+.story-audio-caption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+}
+
 @media screen and (max-width: $bp-large) {
   .story-container {
     padding: 0 20vw 0 20vw;

@@ -19,7 +19,6 @@ export default class HeaderImageSlideshow {
                 src = (slides[x].firstElementChild.attributes.src.nodeValue)
                 focusLeft = slides[x].getElementsByTagName('img')[0].getAttribute('data-story-focus-left') || '50%'
                 focusTop = slides[x].getElementsByTagName('img')[0].getAttribute('data-story-focus-top') || '50%'
-                console.log(focusTop, focusLeft)
 
                 slideshowElement.style.cssText = "background-image: url('" + src + "'); background-position: " + focusLeft + " " + focusTop + ";"
             }

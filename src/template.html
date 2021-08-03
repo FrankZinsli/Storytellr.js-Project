@@ -114,6 +114,21 @@
     </section>
 
     <section class="story-section">
+      <div class="story-audio-container">
+        <audio class="story-audio" controls>
+          <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
+          <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
+          Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+          <a href="../src/assets/audio/audio.mp3">herunterladen</a> und in deinem eigenen Audio-Player
+          anhören.
+        </audio>
+        <div class="story-audio-caption">
+          Caption 1
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section">
       <img id="yourImageZoomId" class="story-image-zoom" src="../src/assets/images/image1.jpg" alt="Snow">
 
       <!--<div id="myModal" class="story-image-zoom-modal">
@@ -146,6 +161,77 @@
       </div>
     </section>
 
+    <section class="story-section">
+      <div class="story-audio-slideshow" id="Your-Audio-Slideshow-Name">
+        <div class="story-audio-slideshow-container">
+          <div class="story-audio-slideshow-text">
+            <p>Alfredo</p>
+          </div>
+          <audio class="story-audio-slideshow" controls>
+            <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
+            <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
+            Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+            <a href="../src/assets/audio/audio.mp3">herunterladen</a> und in deinem eigenen Audio-Player
+            anhören.
+          </audio>
+          <div class="story-audio-slideshow-caption">
+            Caption 1
+          </div>
+        </div>
+
+        <div class="story-audio-slideshow-container">
+          <div class="story-audio-slideshow-text">
+            <p>Affra</p>
+          </div>
+          <audio class="story-audio-slideshow" controls>
+            <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
+            <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
+            Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+            <a href="../src/assets/audio/audio.mp3">herunterladen</a> und in deinem eigenen Audio-Player
+            anhören.
+          </audio>
+          <div class="story-audio-slideshow-caption">
+            Caption 2
+          </div>
+        </div>
+
+        <div class="story-audio-slideshow-container">
+          <div class="story-audio-slideshow-text">
+            <p>Bernardo</p>
+          </div>
+          <audio class="story-audio-slideshow" controls>
+            <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
+            <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
+            Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+            <a href="../src/assets/audio/audio.mp3">herunterladen</a> und in deinem eigenen Audio-Player
+            anhören.
+          </audio>
+          <div class="story-audio-slideshow-caption">
+            Caption 3
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-text-slideshow" id="Your-Text-Slideshow-Name">
+        <div class="story-text-slideshow-container">
+          <h1>Titel</h1>
+          <p>Text paragraph</p>
+        </div>
+
+        <div class="story-text-slideshow-container">
+          <h1>Titel 2</h1>
+          <p>Text paragraph 2</p>
+        </div>
+
+        <div class="story-text-slideshow-container">
+          <h1>Titel 3</h1>
+          <p>Text paragraph3</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script type="text/javascript">
@@ -157,6 +243,17 @@
       focusPointTop: '50%',
       // Scrolldown option
     })*/
+
+    // Audio Slideshow
+    new $story.AudioSlideshow({
+      id: "Your-Audio-Slideshow-Name",
+      count: true
+    })
+
+    // Text Slideshow
+    new $story.TextSlideshow({
+      id: "Your-Text-Slideshow-Name"
+    })
 
     // Header Image Slideshow
     new $story.HeaderImageSlideshow({

@@ -6,6 +6,8 @@ import TocGenerator from "./components/toc/table-of-contents"
 import HeaderImage from "./components/header/header-image"
 import HeaderImageSlideshow from "./components/header/header-image-slideshow"
 import ImageFullscreen from "./components/images/image-fullscreen";
+import AudioSlideshow from "./components/audio/audio-slideshow";
+import TextSlideshow from "./components/text-slideshow/text-slideshow";
 
 export {
   ImageSlideshow,
@@ -13,5 +15,7 @@ export {
   TocGenerator,
   HeaderImage,
   HeaderImageSlideshow,
-  ImageFullscreen
+  ImageFullscreen,
+  AudioSlideshow,
+  TextSlideshow
 }
