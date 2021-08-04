@@ -80,26 +80,26 @@
     </section>
 
     <section class="story-section">
-      <div class="story-image-slideshow" id="Your-Slideshow-Name">
+      <div class="story-image-slideshow" id="imageSlideshow">
         <div class="story-image">
-          <img alt="First Image"
-               src="https://images.unsplash.com/photo-1611095567219-8fa7d4d8bf48?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80">
+          <img alt="Beschreibung zu Bild 1"
+               src="../src/assets/images/image1.jpg">
           <div class="story-image-caption">
-            Caption Text one
+            Beschreibung zu Bild 1
           </div>
         </div>
         <div class="story-image">
-          <img alt="Second Image"
-               src="https://images.unsplash.com/photo-1612832164313-ac0d7e07b5ce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80">
+          <img alt="Beschreibung zu Bild 2"
+               src="../src/assets/images/image2.jpg">
           <div class="story-image-caption">
-            Caption Two one
+            Beschreibung zu Bild 2
           </div>
         </div>
         <div class="story-image">
-          <img alt="Third Image"
-               src="https://images.unsplash.com/photo-1611095565995-d09bbf618f6d?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80">
+          <img alt="Beschreibung zu Bild 3"
+               src="../src/assets/images/image3.jpg">
           <div class="story-image-caption">
-            Caption Three one
+            Beschreibung zu Bild 3
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
 
     <section class="story-section">
       <div class="story-audio-container">
-        <audio class="story-audio" controls>
+        <audio class="story-audio-player" controls>
           <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
           <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
           Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
@@ -167,7 +167,7 @@
           <div class="story-audio-slideshow-text">
             <p>Alfredo</p>
           </div>
-          <audio class="story-audio-slideshow" controls>
+          <audio class="story-audio-player" controls>
             <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
             <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
             Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
@@ -175,7 +175,7 @@
             anhören.
           </audio>
           <div class="story-audio-slideshow-caption">
-            Caption 1
+            Beschreibung zu Audio eins.
           </div>
         </div>
 
@@ -183,7 +183,7 @@
           <div class="story-audio-slideshow-text">
             <p>Affra</p>
           </div>
-          <audio class="story-audio-slideshow" controls>
+          <audio class="story-audio-player" controls>
             <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
             <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
             Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
@@ -191,7 +191,7 @@
             anhören.
           </audio>
           <div class="story-audio-slideshow-caption">
-            Caption 2
+            Beschreibung zu Audio zwei.
           </div>
         </div>
 
@@ -199,7 +199,7 @@
           <div class="story-audio-slideshow-text">
             <p>Bernardo</p>
           </div>
-          <audio class="story-audio-slideshow" controls>
+          <audio class="story-audio-player" controls>
             <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
             <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
             Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
@@ -207,7 +207,7 @@
             anhören.
           </audio>
           <div class="story-audio-slideshow-caption">
-            Caption 3
+            Beschreibung zu Audio drei.
           </div>
         </div>
       </div>
@@ -247,8 +247,8 @@
     <section class="story-section">
       <div class="story-media-slideshow" id="audioSlideshow">
         <div class="story-media-slideshow-container">
-          <div class="story-media-image">
-          <video class="story-media-image-player" width="1920" height="1280" controls poster="../src/assets/images/image1.jpg">
+          <div class="story-media">
+          <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image1.jpg">
             <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
             <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
             Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
@@ -259,8 +259,8 @@
         </div>
 
         <div class="story-media-slideshow-container">
-          <div class="story-media-image">
-          <video class="story-media-image-player" width="1920" height="1280" controls poster="../src/assets/images/image2.jpg">
+          <div class="story-media">
+          <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image2.jpg">
             <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
             <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
             Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
@@ -271,14 +271,68 @@
         </div>
 
         <div class="story-media-slideshow-container">
-          <div class="story-media-image">
-          <video class="story-media-image-player" width="1920" height="1280" controls poster="../src/assets/images/image3.jpg">
+          <div class="story-media">
+          <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image3.jpg">
             <source src="../src/assets/audio/audio.ogg" type="audio/ogg">
             <source src="../src/assets/audio/audio.mp3" type="audio/mpeg">
             Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
             <a href="../src/assets/audio/audio.mp3">herunterladen</a> und in deinem eigenen Audio-Player
             anhören.
           </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-media-slideshow" id="videoSlideshow">
+        <div class="story-media-slideshow-container">
+          <div class="story-media">
+            <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image1.jpg">
+              <source src="../src/assets/video/example.mp4" type="video/mp4">
+              Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+              <a href="../src/assets/video/example.mp4">herunterladen</a> und in deinem eigenen Audio-Player
+              anhören.
+            </video>
+          </div>
+        </div>
+
+        <div class="story-media-slideshow-container">
+          <div class="story-media">
+            <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image2.jpg">
+              <source src="../src/assets/video/Header-Image.mp4" type="video/mp4">
+              <source src="../src/assets/video/Header-Image.ogg" type="video/ogg">
+              Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+              <a href="../src/assets/video/Header-Image.mp4">herunterladen</a> und in deinem eigenen Audio-Player
+              anhören.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-media-slideshow">
+        <div class="story-media-slideshow-container">
+          <div class="story-media">
+            <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image1.jpg">
+              <source src="../src/assets/video/example.mp4" type="video/mp4">
+              Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+              <a href="../src/assets/video/example.mp4">herunterladen</a> und in deinem eigenen Audio-Player
+              anhören.
+            </video>
+          </div>
+        </div>
+
+        <div class="story-media-slideshow-container">
+          <div class="story-media">
+            <video class="story-media-player" width="1920" height="1280" controls poster="../src/assets/images/image2.jpg">
+              <source src="../src/assets/video/Header-Image.mp4" type="video/mp4">
+              <source src="../src/assets/video/Header-Image.ogg" type="video/ogg">
+              Leider unterstützt dein Browser keine Audio-Tags. Wenn du möchtest, kannst du das Audio
+              <a href="../src/assets/video/Header-Image.mp4">herunterladen</a> und in deinem eigenen Audio-Player
+              anhören.
+            </video>
           </div>
         </div>
       </div>
@@ -299,7 +353,8 @@
     // Audio Slideshow
     new $story.AudioSlideshow({
       id: "Your-Audio-Slideshow-Name",
-      count: true
+      count: true,
+      autoplay: true
     })
 
     // Text Slideshow
@@ -339,8 +394,7 @@
 
     // Slideshow
     new $story.ImageSlideshow({
-      id: "Your-Slideshow-Name",
-      animation: "fade",
+      id: "imageSlideshow",
       imageCount: true,
       autoplay: 9000,
       arrows: true,
@@ -349,7 +403,14 @@
 
     // image audio Slideshow
     new $story.MediaSlideshow({
-      id: "audioSlideshow"
+      id: "audioSlideshow",
+      autoplay: true
+    })
+
+    // video slideshow
+    new $story.MediaSlideshow({
+      id: "videoSlideshow",
+      autoplay: true
     })
 
     // Youtube Video

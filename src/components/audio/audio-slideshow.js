@@ -4,12 +4,13 @@ import setAttributes from "../../helpers/set-attributes";
 export default class AudioSlideshow {
     constructor(obj) {
         this.id = obj.id
+        this.autoplay = obj.autoplay || false
         this.audioSlideshow = document.getElementById(this.id)
         this.storyAudios = this.audioSlideshow.getElementsByClassName('story-audio-slideshow-container')
         this.count = obj.count || false
         this.count && this.createAudioCount(this.storyAudios)
         this.createAudioController(this.storyAudios)
-        AudioSlideshow.showCurrentAudio(this.id, '')
+        AudioSlideshow.showCurrentAudio(this.id, this.autoplay, "")
     }
     createAudioCount(storyAudio){
         let captions, captionContent, newCaptionContent;
@@ -24,7 +25,7 @@ export default class AudioSlideshow {
 
     createAudioController(storyAudio){
         let divElement, spanElement, audioContainer;
-        audioContainer = this.audioSlideshow.getElementsByClassName("story-audio-slideshow")
+        audioContainer = this.audioSlideshow.getElementsByClassName("story-audio-player")
 
         for (let i = 0; i < storyAudio.length; i++){
             divElement = document.createElement('div')
@@ -36,7 +37,7 @@ export default class AudioSlideshow {
                 spanElement = document.createElement('span')
                 setAttributes(spanElement, {
                     "class" : "story-audio-controller story-audio-controller-"+i,
-                    "onclick" : '$story.AudioSlideshow.showCurrentAudio(' + '"' + this.id + '", ' + (i) + ')'
+                    "onclick" : '$story.AudioSlideshow.showCurrentAudio(' + '"' + this.id + '", ' + this.autoplay + ', ' + (i) + ')'
                 })
                 divElement.appendChild(spanElement)
             }
@@ -44,24 +45,31 @@ export default class AudioSlideshow {
         }
     }
 
-    static showCurrentAudio(slideshowID, index){
+    static showCurrentAudio(slideshowID, autoplay, index){
         let defaultIndex, slideshow, audioSlides, controlls, controllsNew, audios;
-
-        defaultIndex = 0
-        if (index === ''){
-            index = defaultIndex
-        }
 
         slideshow = document.getElementById(slideshowID)
         audioSlides = slideshow.getElementsByClassName('story-audio-slideshow-container')
         controlls = slideshow.querySelectorAll('*[class^="story-audio-controller"]')
-        controllsNew = slideshow.getElementsByClassName('story-audio-controller-'+[index])
-        audios = slideshow.getElementsByClassName('story-audio-slideshow')
+        audios = slideshow.getElementsByClassName('story-audio-player')
 
         for (let i = 0; i < audioSlides.length; i++) {
             audioSlides[i].style.display = "none";
+            audios[i].currentTime = 0
             audios[i].pause()
         }
+
+        defaultIndex = 0
+        if (index === ''){
+            index = defaultIndex
+        } else {
+            if (autoplay === true) {
+                audios[index].play()
+            }
+        }
+
+        controllsNew = slideshow.getElementsByClassName('story-audio-controller-'+[index])
+
         audioSlides[index].style.display = "block";
         for (let i = 0; i < controlls.length; i++) {
             controlls[i].className = controlls[i].className.replace(" active-audio-controller", "")

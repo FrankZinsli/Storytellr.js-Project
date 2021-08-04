@@ -4,16 +4,16 @@ import "./image-slideshow.scss"
 export default class ImageSlideshow {
   constructor(obj) {
     this.id = obj.id;
-    this.animation = obj.animation;
-    this.imageCount = obj.imageCount;
-    this.arrows = obj.arrows;
-    this.controller = obj.controller;
-    this.autoPlay = obj.autoPlay;
+    /*this.animation = obj.animation;*/
+    this.imageCount = obj.imageCount || false;
+    this.arrows = obj.arrows || false;
+    this.controller = obj.controller || false;
+    this.autoPlay = obj.autoPlay || false;
     this.slideshow = document.getElementById(this.id)
     this.storyImages = this.slideshow.getElementsByClassName('story-image')
     this.imageCount && this.createImageCount(this.storyImages)
     this.arrows && this.createArrows()
-    this.animation && this.createAnimation(this.animation, this.storyImages)
+    /*this.animation && this.createAnimation(this.animation, this.storyImages)*/
     this.controller && this.createController(this.storyImages.length)
     this.autoPlay && this.autoPlayer(this.autoPlay, this.id)
     ImageSlideshow.showCurrentSlide(this.id, '')
@@ -53,13 +53,13 @@ export default class ImageSlideshow {
     this.slideshow.appendChild(prevButton)
     this.slideshow.appendChild(nextButton)
   }
-  createAnimation(animationType, storyImages){
+/*  createAnimation(animationType, storyImages){
     if(animationType === 'fade' || animationType === 'default' || animationType === ''){
       for (let i = 0; i < storyImages.length; i++){
         storyImages[i].classList.add(animationType)
       }
     }
-  }
+  }*/
   createController(storyLength){
     let divElement, spanElement;
 

@@ -5,6 +5,22 @@
 
   .story-media-slideshow-container {
     width: 100%;
+
+    .story-media {
+      position: relative;
+      padding-bottom: 66.66%; //56.25%
+      padding-top: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .story-media-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .story-media-controllers {

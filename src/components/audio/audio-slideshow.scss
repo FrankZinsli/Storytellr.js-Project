@@ -3,15 +3,12 @@
   margin: auto;
 
   .story-audio-slideshow-container {
-    .story-audio-slideshow {
-      width: 100%;
-      height: auto;
-    }
     .story-audio-slideshow-caption {
       text-align: center;
       font-style: italic;
       margin: 10px 0 10px 0;
     }
+
   }
 
   .story-audio-controllers {
@@ -31,4 +28,8 @@
       background-color: #717171;
     }
   }
+}
+.story-audio-player {
+  width: 100%;
+  height: auto;
 }
