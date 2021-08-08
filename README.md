@@ -99,7 +99,7 @@ Du kannst den Code kopieren und nach deinen eigenen Vorstellungen anpassen.
 </head>
 
 <body>
-<header class="story-header" id="YourHeaderImageSlideshowId">
+<header class="story-header">
     <h1 class="story-text-h1">Titel</h1>
     <h2 class="story-text-h2">Untertitel</h2>
 </header>
