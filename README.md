@@ -43,24 +43,24 @@ Wenn du Storytellr.js lokal in dein Projekt einbinden möchtest, dann kannst du 
 
 *CDN*
 ```html
-<link href="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.css" rel="stylesheet" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.css">
 ```
 
 *Lokal*
 ```html
-<link href="../path/to/storytellr.min.css" rel="stylesheet" crossorigin="anonymous">
+<link rel="stylesheet" href="../path/to/storytellr.min.css">
 ```
 
 2. Kopiere den folgenden `<script>` Code und füge ihn vor deinem schliessenden `</bod>` Tag ein.
 
 *CDN*
 ```html
-<script src="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.js"></script>
 ```
 
 *Lokal*
 ```html
-<script src="../path/to/storytellr.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../path/to/storytellr.min.js"></script>
 ```
 
 ## Starter-Template :rocket:
@@ -95,7 +95,7 @@ Du kannst den Code kopieren und nach deinen eigenen Vorstellungen anpassen.
     <meta name="twitter:creator" content="@Autor">
     <meta name="twitter:image" content="https://storytellr.netlify.app/assets/logo/storytellr-social-logo.png">
 
-    <link href="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.css">
 </head>
 
 <body>
@@ -110,7 +110,7 @@ Du kannst den Code kopieren und nach deinen eigenen Vorstellungen anpassen.
     </section>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/storytellr.js@1.0.0/storytellr.min.js"></script>
 <script>
     // Aufruf der Storytellr-Funktionen
 </script>
