@@ -17,41 +17,43 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 1rem;
 }
 
-h1 {
-  color: $primary-color;
-}
-
-h2,h3,h4,h5,h6 {
-  color: $secondary-color;
-}
-
 a {
-  color: $accent-color;
+  color: $text-color;
 }
 
 .story-text-h1 {
   font-size: 2.2rem;
   font-weight: 600;
+  color: $primary-color;
 }
 
 .story-text-h2 {
   font-size: 1.6rem;
   font-weight: 500;
+  color: $secondary-color;
 }
 
 .story-text-h3 {
   font-size: 1.4rem;
   font-weight: 500;
+  color: $secondary-color;
 }
 
 .story-text-h4 {
   font-size: 1.2rem;
   font-weight: 400;
+  color: $secondary-color;
 }
 
 .story-text {
   font-size: 1rem;
   font-weight: 400;
+  color: $text-color;
+  line-height: 1.5rem;
+}
+
+.story-hr {
+  color: #5353581f;
 }
 
 .story-header {
@@ -78,13 +80,12 @@ a {
 }
 
 .story-container {
-  padding: 0 25vw 0 25vw;
-  background-color: #bbbbbb;
+  padding: 5vw 25vw 5vw 25vw;
 }
 
 .story-section {
-  padding: 20px;
-  background-color: #eeeeee;
+  padding: 0 20px 10px 20px;
+  background-color: #f7f7f775
 }
 
 .story-image {
@@ -113,26 +114,27 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: $bp-large) {
   .story-container {
-    padding: 0 20vw 0 20vw;
+    padding: 5vw 20vw 5vw 20vw;
   }
 }
 @media screen and (max-width: $bp-medium) {
   .story-container {
-    padding: 0 15vw 0 15vw;
+    padding: 5vw 15vw 5vw 15vw;
   }
 }
 @media screen and (max-width: $bp-small) {
   .story-container {
-    padding: 0 10vw 0 10vw;
+    padding: 3vw 10vw 3vw 10vw;
   }
 }
 @media screen and (max-width: $bp-xsmall) {
   .story-container {
-    padding: 0 5vw 0 5vw;
+    padding: 2vw 5vw 2vw 5vw;
   }
 }
 

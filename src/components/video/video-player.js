@@ -89,7 +89,7 @@ export default class VideoPlayer {
     createYoutubePlayer(player_id, player_video_id, player_url_options) {
         let embedUrl, videoWrapper, videoContainer, iframeContainer;
 
-        embedUrl = "http://www.youtube.com/embed/"+player_video_id+player_url_options
+        embedUrl = "https://www.youtube.com/embed/"+player_video_id+player_url_options
         videoWrapper = document.getElementById(player_id)
         videoContainer = document.createElement("div")
 

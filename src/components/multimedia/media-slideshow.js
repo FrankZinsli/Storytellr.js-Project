@@ -58,7 +58,6 @@ export default class MediaSlideshow {
 
         controllsNew = slideshow.getElementsByClassName('story-media-controller-'+[index])
 
-
         mediaSlides[index].style.display = "block";
         for (let i = 0; i < controlls.length; i++) {
             controlls[i].className = controlls[i].className.replace(" active-media-controller", "")

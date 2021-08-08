@@ -39,6 +39,7 @@
     img {
       max-width: 100%;
       height: auto;
+      border-radius: 5px;
     }
     .story-image-caption{
       color: #f2f2f2;
@@ -56,6 +57,9 @@
       position: absolute;
       top: 0;
     }
+  }
+  .story-image-controllers-hidden {
+    visibility: hidden;
   }
   .story-image-controllers {
     text-align: center;

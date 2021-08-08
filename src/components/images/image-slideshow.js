@@ -14,7 +14,7 @@ export default class ImageSlideshow {
     this.imageCount && this.createImageCount(this.storyImages)
     this.arrows && this.createArrows()
     /*this.animation && this.createAnimation(this.animation, this.storyImages)*/
-    this.controller && this.createController(this.storyImages.length)
+    this.createController(this.storyImages.length, this.controller)
     this.autoPlay && this.autoPlayer(this.autoPlay, this.id)
     ImageSlideshow.showCurrentSlide(this.id, '')
   }
@@ -60,14 +60,22 @@ export default class ImageSlideshow {
       }
     }
   }*/
-  createController(storyLength){
+  createController(storyLength, visibility){
     let divElement, spanElement;
+    this.controller = 'dot'
 
     if(this.controller === 'dot'){
       divElement = document.createElement('div')
-      setAttributes(divElement, {
-        "class" : "story-image-controllers",
-      })
+      if (visibility) {
+        setAttributes(divElement, {
+          "class" : "story-image-controllers",
+        })
+      } else {
+        setAttributes(divElement, {
+          "class" : "story-image-controllers-hidden",
+        })
+      }
+
       for (let i = 0; i < storyLength; i++){
         spanElement = document.createElement('span')
         setAttributes(spanElement, {
